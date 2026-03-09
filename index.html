@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>AQI Prediction Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h1>🌍 AQI Prediction Dashboard</h1>
+
+<div class="card">
+
+<h2>Enter Pollutant Values</h2>
+
+<div class="input-group">
+<i class="fa-solid fa-smog"></i>
+<input type="number" id="pm25" placeholder="PM2.5">
+</div>
+
+<div class="input-group">
+<i class="fa-solid fa-wind"></i>
+<input type="number" id="pm10" placeholder="PM10">
+</div>
+
+<div class="input-group">
+<i class="fa-solid fa-industry"></i>
+<input type="number" id="no2" placeholder="NO2">
+</div>
+
+<div class="input-group">
+<i class="fa-solid fa-cloud"></i>
+<input type="number" id="co" placeholder="CO">
+</div>
+
+<button onclick="predictAQI()">Predict AQI</button>
+
+</div>
+
+<div class="result-card">
+
+<h2 id="aqiValue">AQI: --</h2>
+<p id="category">Category: --</p>
+
+</div>
+
+<canvas id="aqiChart"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
